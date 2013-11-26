@@ -240,21 +240,21 @@ section#downloads a em {
   display: block;
 }
 
-section#downloads a.zip {
+section#downloads a.boy {
   float: left;
   background-position: 0 0;
 }
 
-section#downloads a.tgz {
+section#downloads a.girl {
   float: right;
   background-position: -275px 0;
 }
 
-section#downloads a.zip:hover {
+section#downloads a.boy:hover {
   background-position: 0 -197px;
 }
 
-section#downloads a.tgz:hover {
+section#downloads a.girl:hover {
   background-position: -275px -197px;
 }
 
@@ -276,10 +276,11 @@ section#main_content {
 /* footer */
 
 footer {
-  background: transparent url(../images/footer-ramp.jpg) center -1px no-repeat;
-  padding-top: 104px;
+  background: transparent url(../images/nav_bg.png) center -1px no-repeat;
+  /*padding-top: 104px;*/
   margin: -94px auto 40px;
   max-width: 560px;
+  height: 450px;
   text-align: center;
 }
 
@@ -364,7 +365,7 @@ footer span.octocat {
 /* content */
 
 body {
-  background: #ece4d8;
+  background: #F7F7F7;
   font: normal normal 15px/1.5 Georgia, Palatino,” Palatino Linotype”, Times, “Times New Roman”, serif;
   color: #544943;
   -webkit-font-smoothing: antialiased;
