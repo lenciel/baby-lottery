@@ -13,7 +13,7 @@ function showModal(message, input) {
       if (data === false) {
         return console.log('Cancelled');
       }
-      return console.log('Username', data.greeting, 'Password', data.email);
+      return console.log('greeting', data.greeting, 'email', data.email);
     }
   });
 }
