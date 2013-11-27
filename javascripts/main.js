@@ -19,7 +19,7 @@ function showModal(message, input) {
 }
 
 $(document).ready(function () {
-  $('#main_content').headsmart();
+//  $('#main_content').headsmart();
 
   $('.boy').click(function(){
     showModal('你的选择是"男生" (Your choice is "boy"):', "<input name=\"greeting\" type=\"text\" placeholder=\"送他句祝福吧 (Send him a greeting please)\" required />\n<input name=\"email\" type=\"email\" placeholder=\"获取抽奖码和结果的Email (Email to get the code)\" required />")
