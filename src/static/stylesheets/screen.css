@@ -268,6 +268,7 @@ section#main_content {
 }
 
 section#main_content p{
+    text-indent: 2em;
     width: 500px;
     margin: .3em 1em;
 }
