@@ -2,10 +2,10 @@
 # use this by creating a symbol link like
 # ln -s /var/www/{{ project_name }}/configs/httpd.vhost /etc/httpd/sites-enabled/baby-lottery.conf
 <VirtualHost *:80>
-     ServerAdmin lenciel@gmail.com
-     ServerName baby-greeting.lenciel.cn
+    ServerAdmin lenciel@gmail.com
+    ServerName baby-greeting.lenciel.cn
 
-     DocumentRoot /var/www/baby-lottery/src
+    DocumentRoot /var/www/baby-lottery/src
     <Directory /var/www/baby-lottery/src/settings>
         Order allow,deny
         allow from all
