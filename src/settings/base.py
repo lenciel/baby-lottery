@@ -331,5 +331,5 @@ GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-175991-4'
 #############################################################
 
 ############## MAILBOX USED TO LEAVE A MESSAGE TO APP2B #####
-MAIL_FROM = ['baby-greeting@lenciel.cn']
+MAIL_FROM = 'baby-greeting@lenciel.cn'
 #############################################################
