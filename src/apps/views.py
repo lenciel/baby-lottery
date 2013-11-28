@@ -7,7 +7,6 @@ from django.http import HttpResponse
 
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-#from utils import get_latest_cases, get_latest_articles
 
 
 def home(request):
