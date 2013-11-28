@@ -1,0 +1,77 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="zh_CN"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zh_CN"> <!--<![endif]-->
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Greetings for my baby">
+    <meta name="author" content="lenciel">
+    <!--<meta name="viewport" content="width=640" />-->
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no"/>
+
+    <title>Greetings for my baby</title>
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="{% static 'stylesheets/mobile.css' %}" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="{% static 'stylesheets/pygment_trac.css' %}"/>
+    <link rel="stylesheet" href="{% static 'stylesheets/vex.css' %}" />
+    <link rel="stylesheet" href="{% static 'stylesheets/vex-theme-os.css' %}" />
+    <!-- This file store project specific CSS -->
+    <link rel="stylesheet" href="{% static 'stylesheets/core.css' %}" media="screen"/>
+
+    <!-- Included Google Analytics -->
+    {% include 'ga.html' %}
+  </head>
+
+  <body>
+    <div class="shell">
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <!--<h1>我猜我猜我猜猜猜!</h1>-->
+            <h1>We are having a baby!</h1>
+            <h2></h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="#" class="boy"><em>点我竞猜 (click to make a guess)</em>他是男生(Boy)</a>
+          <a href="#" class="girl"><em>点我竞猜 (click to make a guess)</em>她是女生(Girl)</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <p>自从得知小家伙就要到来的消息，偶像派和本座还有我们的家人都沉浸在喜悦中。随着预产期越来越近，很多亲友开始问我们：小家伙是个男孩还是女孩？我们商量了之后觉得，不如在谜底揭开的同时，和我们的家人朋友们一起分享这份甜蜜的惊喜，于是就有了这次竞猜。</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>Made by <a href="http://lenciel.cn">lenciel</a> with love for my darling wife and my darling baby.</p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="{% static 'javascripts/modernizr.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/headsmart.min.js' %}"></script>
+    <script src="{% static 'javascripts/vex.combined.min.js' %}"></script>
+    <script>vex.defaultOptions.className = 'vex-theme-os';</script>
+    <script type="text/javascript" src="{% static 'javascripts/main.js' %}"></script>
+  </body>
+</html>
