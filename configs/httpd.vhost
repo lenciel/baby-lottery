@@ -12,8 +12,8 @@
     </Directory>
 
     WSGIScriptAlias / /var/www/baby-lottery/src/settings/wsgi.py
-    WSGIDaemonProcess app2b python-path=/var/www/baby-lottery/src:/usr/local/pythonenv/baby-lottery/lib/python2.7/site-packages/
-    WSGIProcessGroup app2b
+    WSGIDaemonProcess baby python-path=/var/www/baby-lottery/src:/usr/local/pythonenv/baby-lottery/lib/python2.7/site-packages/
+    WSGIProcessGroup baby
 
     Alias /media/ /var/www/baby-lottery/media/
     Alias /static/ /var/www/baby-lottery/assets/
