@@ -19,14 +19,20 @@ function showModal(message, input) {
 }
 
 $(document).ready(function () {
-//  $('#main_content').headsmart();
+  $('#main_content').headsmart();
 
   $('.boy').click(function(){
-    showModal('你的选择是"男生" (Your choice is "boy"):', "<input name=\"greeting\" type=\"text\" placeholder=\"送他句祝福吧 (Send him a greeting please)\" required />\n<input name=\"email\" type=\"email\" placeholder=\"获取抽奖码和结果的Email (Email to get the code)\" required />")
+    showModal('你的选择是"男生" (Your choice is "boy")',
+      "<style>\n    .vex-custom-field-wrapper {\n        margin: 1em 0;\n    }\n    .vex-custom-field-wrapper > label {\n        display: inline-block;\n        margin-bottom: .2em;\n    }\n</style>\n" +
+        "<div class=\"vex-custom-field-wrapper\">\n    <label for=\"date\">送他句祝福吧</label>\n    <div class=\"vex-custom-input-wrapper\">\n        <input name=\"greeting\" type=\"text\" placeholder=\"Send him a greeting please\" required />\n    </div>\n</div>\n" +
+        "<div class=\"vex-custom-field-wrapper\">\n    <label for=\"color\">获取抽奖码和结果的Email</label>\n    <div class=\"vex-custom-input-wrapper\">\n        <input name=\"email\" type=\"email\" placeholder=\"Email to get the code and maybe the present!\" required />    </div>\n</div>")
   });
 
   $('.girl').click(function(){
-    showModal('你的选择是"女生" (Your choice is "girl"):', "<input name=\"greeting\" type=\"text\" placeholder=\"送她句祝福吧 (Send her a greeting please)\" required />\n<input name=\"email\" type=\"email\" placeholder=\"获取抽奖码和结果的Email (Email to get the code)\" required />")
+    showModal('你的选择是"女生" (Your choice is "girl")',
+      "<style>\n    .vex-custom-field-wrapper {\n        margin: 1em 0;\n    }\n    .vex-custom-field-wrapper > label {\n        display: inline-block;\n        margin-bottom: .2em;\n    }\n</style>\n" +
+        "<div class=\"vex-custom-field-wrapper\">\n    <label for=\"date\">送她句祝福吧</label>\n    <div class=\"vex-custom-input-wrapper\">\n        <input name=\"greeting\" type=\"text\" placeholder=\"Send her a greeting please\" required />\n    </div>\n</div>\n" +
+        "<div class=\"vex-custom-field-wrapper\">\n    <label for=\"color\">获取抽奖码和结果的Email</label>\n    <div class=\"vex-custom-input-wrapper\">\n        <input name=\"email\" type=\"email\" placeholder=\"Email to get the code and maybe the present!\" required />    </div>\n</div>")
   });
 
 })
