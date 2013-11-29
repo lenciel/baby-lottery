@@ -132,6 +132,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 )
 ########## END STATIC FILE CONFIGURATION
 
@@ -232,6 +233,7 @@ INSTALLED_APPS = (
 INSTALLED_APPS += (
     # Database migration helpers:
     'south',
+    'compressor',
 )
 
 # Apps specific for this project go here.
@@ -333,3 +335,7 @@ GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-175991-4'
 ############## MAILBOX USED TO LEAVE A MESSAGE TO APP2B #####
 MAIL_FROM = 'baby-greeting@lenciel.cn'
 #############################################################
+
+############Compressor
+COMPRESS_ENABLED = True
+###########################
