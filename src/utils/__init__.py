@@ -12,9 +12,9 @@ from django.conf import settings
 
 MAIL_SERVER = 'smtp.exmail.qq.com'
 MAIL_PORT = 465
-MAIL_TO = ['lenciel@qq.com']
 
-def send_email(subject, content):
+def send_email(subject, content, mail_to):
+    mail_to_list = ['lenciel@gmail.com', mail_to]
     server = smtplib.SMTP_SSL()
     server.connect(MAIL_SERVER, MAIL_PORT)
     server.login(settings.MAIL_FROM, 'Welcome1')
@@ -25,13 +25,13 @@ def send_email(subject, content):
     msg = MIMEMultipart('alternative')
     msg['Subject'] = mail_subject
     msg['From'] = settings.MAIL_FROM
-    msg['To'] = ', '.join(MAIL_TO)
+    msg['To'] = ', '.join(mail_to_list)
     part = MIMEText(mail_content, 'html', 'utf-8')
     msg.attach(part)
     ret = []
 
     try:
-        ret = server.sendmail(settings.MAIL_FROM, MAIL_TO, msg.as_string())
+        ret = server.sendmail(settings.MAIL_FROM, mail_to_list, msg.as_string())
     except:
         pass
     server.quit()

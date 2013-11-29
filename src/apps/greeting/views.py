@@ -20,10 +20,10 @@ def send_greeting(request):
         message = request.POST.get('message', None)
         lottery_code = gen_random_string()
 
-        mail_subject = u'test'
-        mail_content = u'有朋友猜了%s:<br>姓名：%s <br> 联系方式: %s <br> 留言:%s <br> 幸运码:%s <br> 请速联系!' % (gender, name, email, message, lottery_code);
+        mail_subject = u'Lenceel&Lenciel代表我们的宝宝向您表示感谢!'
+        mail_content = u'您的联系方式: %s <br> 您的幸运码:%s <br> 如果中奖的是您，我们会尽快和您联系!' % (email, lottery_code);
 
-        send_email(mail_subject, mail_content)
+        send_email(mail_subject, mail_content, email)
 
         Greeting = Greeting.objects.create(name=name, gender=gender, email=email, message=message, lottery_code=lottery_code)
         Greeting.save()

@@ -24,7 +24,7 @@ function showModal(gender, message, input) {
         },
         success: function(response) {
           if (response['ret'] == 0) {
-            alert("谢谢您的祝福!");
+            alert("谢谢您的祝福，抽奖代码已经发送到您的邮箱!");
           } else {
             alert('发送失败, 错误原因:"' + response['errmsg'] + '"');
           }
