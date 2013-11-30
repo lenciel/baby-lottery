@@ -1,0 +1,46 @@
+{% load staticfiles %}
+{% load compress %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Baby-Greeting By Lenciel</title>
+<meta charset="utf-8">
+<!-- CSS start Here-->
+    {% compress css %}
+<link rel="stylesheet" href="{% static 'greeting/css/reset.css' %}">
+<link rel="stylesheet" href="{% static 'greeting/css/flipclock.css' %}">
+<link rel="stylesheet" href="{% static 'greeting/css/style.css' %}" />
+  {% endcompress %}
+
+<!-- CSS end Here-->
+<!-- JS start Here-->
+    {% compress js %}
+<script src="{% static 'greeting/js/jquery.js' %}"></script>
+<script src="{% static 'greeting/js/modernizr.js' %}"></script>
+      {% endcompress %}
+<!-- JS end Here-->
+</head>
+<body>
+<!-- Main Wrapper start Here-->
+<div class="mainWrapper">
+<!-- Content Wrapper start Here-->
+  <section class="contentWrapper">
+    <h2>谜底揭晓仍需等待:</h2>
+    <p>您的幸运码已发送，谢谢您的参与，请和我们一起耐心等待</p>
+  </section>
+<!-- Content Wrapper end Here-->
+<!-- Countdown Wrapper start Here-->
+  <section class="countdown-wrapper cf">
+    <div class="countdown cf"></div>
+  </section>
+<!-- Countdown Wrapper end Here-->
+<!-- Main Wrapper end Here-->
+<!-- JS start Here-->
+{% compress js %}
+<script src="{% static 'greeting/js/prefixfree.min.js' %}"></script>
+<script src="{% static 'greeting/js/flipclock.min.js' %}"></script>
+​<script src="{% static 'greeting/js/custom.js' %}"></script>
+{% endcompress %}
+<!-- JS end Here-->
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* =CSS Reset
+--------------------------------------------------------------------------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/* End CSS Reset
+--------------------------------------------------------------------------------------------------*/
+
+/* remember to define focus styles! */
+:focus { outline: 0; }
+::-webkit-input-placeholder {
+color:#555b61;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+ color:#555b61;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+ color:#555b61;
+}
+
+:-ms-input-placeholder {
+ color:#555b61;
+}
+/* =Toolkit
+--------------------------------------------------------------------------------------------------*/
+
+/* Micro Clearfix Hack by Nicholas Gallagher (http://nicolasgallagher.com/micro-clearfix-hack/) */
+/* For modern browsers */ 
+.cf:before, .cf:after { content:""; display:table; }
+.cf:after { clear:both; }
+/* For IE 6/7 (trigger hasLayout) */
+.cf { zoom:1; }
+/* general purpose classes */
+.nodisplay { display:none; }
+.nodisplay_strict { display:none !important; }
+.alignleft { float:left; }
+.alignnone { clear:both; font-size:0; line-height:0; margin:0; padding:0; border:0; height:0; width:0; }
+.alignright { float:right; }
+/* End Toolkit
+--------------------------------------------------------------------------------------------------*/
+
+/* =Normalization - mostly derived from normalize.css (https://github.com/necolas/normalize.css/) but without comments and compressed to keep the file small
+--------------------------------------------------------------------------------------------------*/
+hr { display:block; height:1px; border:0; margin:1em 0; padding:0; border-top:1px solid #cccccc; /* change border colour to suit your needs */ }
+audio, canvas, video { display: inline-block; *display: inline;
+*zoom: 1;
+}
+audio:not([controls]) { display: none; }
+[hidden] {
+display: none;
+}
+html { overflow-y: scroll; font-size: 100%; }
+body, button, input, select, textarea { font-family: sans-serif; }
+a:focus { outline: none; }
+a:hover, a:active { outline: none; }
+h1 { }
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, fieldset, table, ul { }
+dd { margin: 0px; }
+nav ul, nav ol { list-style: none; list-style-image: none; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+abbr[title] { border-bottom: 1px dotted; cursor:help; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+mark { background: #ff0; color: #000; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+small { font-size: 100%; }
+sub, sup { font-size: 100%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align:top; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+form { margin: 0; }
+fieldset { border: none; margin: 0; padding: 0; }
+legend { border: 0; padding: 0; white-space: normal; *margin-left: -7px;
+}
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle;
+}
+button, input { line-height: normal; }
+button { border: 0; padding: 0; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible;
+white-space: normal; }
+input, select { vertical-align:middle; }
+input { -webkit-appearance: none; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *height: 13px;
+*width: 13px;
+}
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration {
+-webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+border: 0;
+}
+textarea { overflow: auto; vertical-align: top; resize: none; -webkit-appearance: none; }
+::-moz-focus-inner {
+border: 0;
+outline: 0;
+}
+/* End Normalization
+--------------------------------------------------------------------------------------------------*/
+
+
+/* =Typography
+--------------------------------------------------------------------------------------------------*/
+
+/* Setting up the fonts */
+body { font: 14px/18px Arial, Helvetica, sans-serif; color:#000; -webkit-font-smoothing: antialiased; }
+/* End Typography
+--------------------------------------------------------------------------------------------------*/
+
+/* =Links
+--------------------------------------------------------------------------------------------------*/
+a { text-decoration:none; color:#000; cursor:pointer !important; outline: 0; }
+a:hover { text-decoration:none; }
+/* End Links
+--------------------------------------------------------------------------------------------------*/

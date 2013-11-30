@@ -65,3 +65,7 @@ MIDDLEWARE_CLASSES += (
 for logger in LOGGING['loggers'].values():
     handlers = logger['handlers']
     handlers.append('console')
+
+STATICFILES_DIRS = (
+    normpath(join(DJANGO_ROOT, 'static')),
+)

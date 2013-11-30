@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse
+from django.template import RequestContext
+from django.shortcuts import render_to_response
 from utils import send_email, gen_random_string
 from utils.db.queryutil import get_object_or_none
 from utils.ajaxreq.ajaxrequest import HttpResponseJson
@@ -29,3 +31,9 @@ def send_greeting(request):
         Greeting.save()
 
     return HttpResponseJson(get_response_code('success'), request)
+
+
+def result(request):
+    return render_to_response('greeting/result.html',
+                              locals(),
+                              context_instance=RequestContext(request))

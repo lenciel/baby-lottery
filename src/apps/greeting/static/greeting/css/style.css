@@ -1,0 +1,179 @@
+
+@font-face {
+    font-family: 'bebasregular';
+    src: url('../fonts/bebas-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Skeleton */
+.flip-clock-wrapper ul {position:relative; float:left; width:84px; height:162px; font-size:96px; font-weight:700; line-height:188px; border-radius:18px; margin:0 2px;}
+.flip-clock-wrapper ul li { z-index: 1; position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.flip-clock-wrapper ul li:first-child { z-index: 2; }
+.flip-clock-wrapper ul li a {display:block; height:100%; perspective:200px; -webkit-perspective:200px; -moz-perspective:200px; -ms-perspective:200px; -o-perspective:200px; }
+.flip-clock-wrapper ul li a div { z-index: 1; position: absolute; left: 0; width: 100%; height: 50%; overflow: hidden; }
+.flip-clock-wrapper ul li a div .shadow { position: absolute; width: 100%; height: 100%; z-index: 2; }
+.flip-clock-wrapper ul li a div.up {transform-origin:50% 100%; -webkit-transform-origin:50% 100%; -ms-transform-origin:50% 100%; top:0; }
+.flip-clock-wrapper ul li a div.up:after { content: ""; position:absolute; top:79px; left:0; z-index: 5; width: 100%; height:2px; background-color: rgba(0,0,0,.4); }
+.flip-clock-wrapper ul li a div.down {transform-origin:50% 0; -webkit-transform-origin:50% 0; -ms-transform-origin:50% 0; bottom:0;}
+.flip-clock-wrapper ul li a div div.inn { position: absolute; left: 0; z-index: 1; width: 100%; height: 200%; color: #fff; text-align: center; border-radius:18px;}
+.flip-clock-wrapper ul li a div.up div.inn { top: 0; }
+.flip-clock-wrapper ul li a div.down div.inn { bottom: 0; }
+/* PLAY */
+.flip-clock-wrapper ul.play li.flip-clock-before { z-index: 3; }
+.flip-clock-wrapper ul.play li.flip-clock-active { animation: asd .5s .5s linear both; z-index: 2; }
+.flip-clock-divider { float: left; display: inline-block; position: relative; width:10px; height: 100px; }
+.flip-clock-divider:first-child { width: 0; }
+.flip-clock-dot { display: block; background: rgb(50, 52, 52); width: 10px; height: 10px; position: absolute; border-radius: 1000px; box-shadow: 0 0 5px rgba(0, 0, 0, .5); }
+.flip-clock-divider .flip-clock-label { position: absolute; top: -1.5em; right: -86px; color: black; text-shadow: none; }
+.flip-clock-divider.minutes .flip-clock-label { right: -88px; }
+.flip-clock-divider.seconds .flip-clock-label { right: -91px; }
+.flip-clock-dot.top { top: 30px; left: 5px; display:none; }
+.flip-clock-dot.bottom { bottom: 30px; left: 5px; display:none; }
+ @keyframes asd { 0% {
+ z-index: 2;
+}
+ 5% {
+ z-index: 4;
+}
+ 100% {
+ z-index: 4;
+}
+}
+.flip-clock-wrapper ul.play li.flip-clock-active .down { z-index: 2; animation: turn .5s .5s linear both; }
+ @keyframes turn { 0% {
+ transform: rotateX(90deg);
+}
+ 100% {
+ transform: rotateX(0deg);
+}
+}
+.flip-clock-wrapper ul.play li.flip-clock-before .up { z-index: 2; animation: turn2 .5s linear both; }
+ @keyframes turn2 { 0% {
+ transform: rotateX(0deg);
+}
+ 100% {
+ transform: rotateX(-90deg);
+}
+}
+.flip-clock-wrapper ul li.flip-clock-active { z-index: 3; }
+/* SHADOW */
+
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow { background: -moz-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, .1)), color-stop(100%, rgba(0, 0, 0, 1))); background: linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); animation: show .5s linear both; }
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow { background: -moz-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, .1)), color-stop(100%, rgba(0, 0, 0, 1))); background: linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%); animation: hide .5s .3s linear both; }
+ @keyframes show { 0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}
+ @keyframes hide { 0% {
+ opacity: 1;
+}
+ 100% {
+ opacity: 0;
+}
+}
+/*Safari Hack*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+ .flip-clock-wrapper ul {line-height:146px;}
+}
+/*Opera Hack*/
+x:-o-prefocus, .flip-clock-wrapper ul {line-height:146px;}
+
+.days-wrap div.inn {
+    background-color: #2DCB73 !important;
+    text-shadow: 5px 1px #1E894D, 2px 2px #1E894D, 3px 3px #1E894D, 4px 4px #1E894D, 5px 5px #1E894D, 6px 6px #1E894D, 7px 7px #1E894D, 8px 8px #1E894D, 9px 9px #1E894D, 10px 10px #1E894D, 11px 11px #1E894D, 12px 12px #1E894D, 13px 13px #1E894D, 14px 14px #1E8A4E, 15px 15px #1E8B4E, 16px 16px #1E8C4F, 17px 17px #1E8D4F, 18px 18px #1F8E50, 19px 19px #1F8E50, 20px 20px #1F8F51, 21px 21px #1F9051, 22px 22px #1F9152, 23px 23px #1F9252, 24px 24px #209353, 25px 25px #209353, 26px 26px #209454, 27px 27px #209554, 28px 28px #209655, 29px 29px #209755, 30px 30px #219856;
+    font-family: 'bebasregular';
+}
+
+.hours-wrap div.inn {
+    background-color: #3498DB !important;
+    text-shadow: 1px 1px #236895, 2px 2px #236895, 3px 3px #236895, 4px 4px #236895, 5px 5px #236895, 6px 6px #236895, 7px 7px #236895, 8px 8px #236895, 9px 9px #236895, 10px 10px #236895, 11px 11px #236895, 12px 12px #236895, 13px 13px #236895, 14px 14px #236996, 15px 15px #236997, 16px 16px #236A98, 17px 17px #246B99, 18px 18px #246B9A, 19px 19px #246C9B, 20px 20px #246C9C, 21px 21px #256D9D, 22px 22px #256E9D, 23px 23px #256E9E, 24px 24px #256F9F, 25px 25px #256FA0, 26px 26px #2670A1, 27px 27px #2671A2, 28px 28px #2671A3, 29px 29px #2672A4, 30px 30px #2773A5;
+    font-family: 'bebasregular';
+}
+.mins-wrap div.inn {
+    background-color: #9B59B6 !important;
+    text-shadow: 1px 1px #693C7A, 2px 2px #693C7A, 3px 3px #693C7A, 4px 4px #693C7A, 5px 5px #693C7A, 6px 6px #693C7A, 7px 7px #693C7A, 8px 8px #693C7A, 9px 9px #693C7A, 10px 10px #693C7A, 11px 11px #693C7A, 12px 12px #693C7A, 13px 13px #693C7A, 14px 14px #6A3C7B, 15px 15px #6B3D7C, 16px 16px #6B3D7D, 17px 17px #6C3D7D, 18px 18px #6D3E7E, 19px 19px #6D3E7F, 20px 20px #6E3F80, 21px 21px #6F3F81, 22px 22px #6F3F81, 23px 23px #704082, 24px 24px #714083, 25px 25px #714184, 26px 26px #724184, 27px 27px #734185, 28px 28px #734286, 29px 29px #744287, 30px 30px #754388;
+    font-family: 'bebasregular';
+}
+.seconds-wrap div.inn {
+    background-color: #F39C12 !important;
+    text-shadow: 1px 1px #A4690C, 2px 2px #A4690C, 3px 3px #A4690C, 4px 4px #A4690C, 5px 5px #A4690C, 6px 6px #A4690C, 7px 7px #A4690C, 8px 8px #A4690C, 9px 9px #A4690C, 10px 10px #A4690C, 11px 11px #A4690C, 12px 12px #A4690C, 13px 13px #A5690C, 14px 14px #A66A0C, 15px 15px #A76B0C, 16px 16px #A86B0C, 17px 17px #A96C0C, 18px 18px #AA6D0C, 19px 19px #AB6D0C, 20px 20px #AC6E0C, 21px 21px #AD6F0C, 22px 22px #AE6F0C, 23px 23px #AF700C, 24px 24px #B0710C, 25px 25px #B1710C, 26px 26px #B2720C, 27px 27px #B3730C, 28px 28px #B4730C, 29px 29px #B5740C, 30px 30px #B6750D;
+    font-family: 'bebasregular';
+}
+body {
+    background-color: #363F48;
+}
+.countdown .days .flip-clock-label {
+top: 183px;
+left: 53px;
+color: #FFF;
+text-transform: uppercase;
+font-size: 28px;
+font-weight: normal;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.countdown .hours .flip-clock-label {
+top: 183px;
+left: 46px;
+color: #FFF;
+text-transform: uppercase;
+font-size: 28px;
+font-weight: normal;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.countdown .minutes .flip-clock-label {
+top: 183px;
+left: 33px;
+color: #FFF;
+text-transform: uppercase;
+font-size: 28px;
+font-weight: normal;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.countdown .seconds .flip-clock-label {
+top: 183px;
+left: 29px;
+color: #FFF;
+text-transform: uppercase;
+font-size: 28px;
+font-weight: normal;
+font-family: Arial, Helvetica, sans-serif;
+}
+.mainWrapper {
+width: 862px;
+margin: 0 auto;
+padding: 0;
+position: relative;
+}
+.countdown-wrapper {
+margin: 0 0 130px 0;
+padding: 0 0 0 20px;
+}
+
+.contentWrapper {
+    margin: 0 0 60px 0;
+    padding: 32px 0 0 0;
+    text-align: center;
+}
+.contentWrapper h2 {
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #FFF;
+    margin: 0 0 13px 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.contentWrapper p {
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #5E656D;
+}
