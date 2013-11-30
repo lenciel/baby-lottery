@@ -23,7 +23,7 @@ def send_greeting(request):
         lottery_code = gen_random_string()
 
         mail_subject = u'Lenceel&Lenciel代表我们的宝宝向您表示感谢!'
-        mail_content = u'您的联系方式: %s <br> 您的幸运码:%s <br> 如果中奖的是您，我们会尽快和您联系!' % (email, lottery_code);
+        mail_content =  u'Hi, %s, <br/><br/> 感谢您的参与。<br/> 您的联系方式: %s <br/> 您的幸运码:%s <br/> 如果中奖的是您，我们会尽快和您联系!<br/><br/>Thanks for participate.<br/> Your email: %s <br/> Your lucky code:%s <br/> We will get back to you if you are the lucky one, thanks again.<br/><br/>' % (name, email, lottery_code, email, lottery_code);
 
         send_email(mail_subject, mail_content, email)
 
