@@ -27,7 +27,7 @@
 
   $.SwatchBook.defaults = {
     // index of initial centered item， hardcoded to 37 now
-    center : 36,
+    center : 35,
     // number of degrees that is between each item
     angleInc : 8,
     speed : 700,
