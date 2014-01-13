@@ -11,6 +11,9 @@ from django.shortcuts import render_to_response
 
 def home(request):
     ga_property_id = settings.GOOGLE_ANALYTICS_PROPERTY_ID
-    return render_to_response('index.html',
+    return render_to_response('greeting/result.html',
                               locals(),
                               context_instance=RequestContext(request))
+    # return render_to_response('index.html',
+    #                           locals(),
+    #                           context_instance=RequestContext(request))
