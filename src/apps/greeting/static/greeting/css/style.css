@@ -20,9 +20,8 @@
 }
 
 .lottery-container a{
-    color: #008253;
-    text-decoration: underline;
-    text-shadow: -1px -1px 3px rgba(0,0,0,0.1), 1px 1px 2px rgba(0,0,0,0.3);
+    color: #87b11d;
+    text-decoration: none;
 }
 
 .lottery-container h4{
@@ -42,8 +41,7 @@
 }
 
 .lottery-container img{
-    width: 600px;
-    height: 480px;
+    width: 640px;
 }
 
 
