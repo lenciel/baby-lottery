@@ -37,3 +37,9 @@ def result(request):
     return render_to_response('greeting/result.html',
                               locals(),
                               context_instance=RequestContext(request))
+
+
+def greetings(request):
+    return render_to_response('greeting/greetings.html',
+                              locals(),
+                              context_instance=RequestContext(request))

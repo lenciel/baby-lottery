@@ -4,13 +4,25 @@
     height: 400px;
     margin: 30px auto 0 auto;
 }
-
+#sb-container2.sb-container {
+    margin-top: 400px;
+    height: 800px;
+}
+.sb-container h5 span{
+    margin: 0px 4px;
+}
 .lottery-container {
     text-align: center;
     padding-top: 350px;
     width: 100%;
     height: 100%;
     margin: 30px auto 0 auto;
+}
+
+.lottery-container a{
+    color: #008253;
+    text-decoration: underline;
+    text-shadow: -1px -1px 3px rgba(0,0,0,0.1), 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .lottery-container h4{
