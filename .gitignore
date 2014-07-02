@@ -7,5 +7,5 @@
 *.log
 
 /assets/
-
+/logs/
 /src/
