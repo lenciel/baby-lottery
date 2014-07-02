@@ -147,7 +147,7 @@ SECRET_KEY = r"35hv7bt3c$aps!a4*j9l7uur7%#@_=bbg-o7$dm#$!+xz5#7lv"
 ########## SITE CONFIGURATION
 # Hosts/domain names that are valid for this site
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['baby-greeting.lenciel.cn']
 ########## END SITE CONFIGURATION
 
 
