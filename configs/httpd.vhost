@@ -1,0 +1,25 @@
+# apache virtual host configuration file
+# use this by creating a symbol link like
+# ln -s /var/www/{{ project_name }}/configs/httpd.vhost /etc/httpd/sites-enabled/baby-lottery.conf
+<VirtualHost *:80>
+    ServerAdmin lenciel@gmail.com
+    ServerName baby-greeting.lenciel.cn
+
+    DocumentRoot /var/www/baby-lottery
+
+    <Directory "/var/www/baby-lottery">
+        Order allow,deny
+        Options Indexes
+        Allow from All
+        IndexOptions FancyIndexing
+    </Directory>
+    LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+    ErrorLog /var/log/httpd/baby-lottery/error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog "| /usr/sbin/rotatelogs /var/log/httpd/baby-lottery/%Y_%m_%d_access.log 86400 480"  combined
+
+</VirtualHost>
